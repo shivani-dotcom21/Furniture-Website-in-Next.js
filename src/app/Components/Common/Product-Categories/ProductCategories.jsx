@@ -3,7 +3,7 @@ import React from "react";
 export default function ProductCategories() {
   return (
     <>
-      <section className="w-[20%] text-zinc-600 p-5 font-poppins text-[16px]">
+      <section className="w-[20%] text-zinc-600 p-5 font-poppins text-[16px] hidden lg:block">
         <h1 className="text-2xl font-semibold text-zinc-900 mb-5">
           Categories
         </h1>

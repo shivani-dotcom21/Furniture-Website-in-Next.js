@@ -81,7 +81,7 @@ export default function Header() {
         </div>
 
         {halfCart == "true" && (
-          <section className="absolute right-0 top-0 z-999 border w-[30%] h-screen bg-white  p-5 font-outfit text-zinc-700">
+          <section className="absolute right-0 top-0 z-999 border w-[30%] h-screen bg-white  p-5 font-outfit text-zinc-700 ">
             <h2 className="flex justify-between items-center text-xl font-semibold border-b pb-3 border-gray-300">
               {" "}
               Cart

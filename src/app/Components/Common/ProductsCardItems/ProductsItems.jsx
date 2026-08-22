@@ -6,7 +6,7 @@ export default function ProductsItems({data}) {
 let { id, title, thumbnail, price, description } = data 
   return (
     <>
-      <div className="group relative bg-white">
+      <div className="group relative bg-white hidden lg:block">
         <img
           src={thumbnail}
           alt=""
