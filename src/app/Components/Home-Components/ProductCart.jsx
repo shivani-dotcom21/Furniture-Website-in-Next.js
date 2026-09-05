@@ -13,10 +13,12 @@ export default function ProductCart({ productData }) {
       <section className="w-full  font-outfit my-20 p-5">
         <BreadCrums title="Trending Collection" />
 
-        <div className="flex justify-center gap-3 ">
-          <ProductCategories />
+        <div className=" flex justify-center gap-5">
+          <div className=" w-[20%] ">
+            <ProductCategories />
+          </div>
 
-          <div className=" w-[65%]  p-3">
+          <div className=" w-[70%]  p-3">
             {/* <div className="border border-gray-300 py-3 mb-7 mt-3">
               <div className="relative flex justify-end items-center gap-5 px-5">
                 <p>Sort By :</p>

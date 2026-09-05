@@ -10,7 +10,7 @@ let { id, title, thumbnail, price, description } = data
         <img
           src={thumbnail}
           alt=""
-          className="aspect-square w-full rounded-md object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
+          className=" w-full rounded-md  group-hover:scale-120 duration-500 ease-in-out lg:h-80"
         />
         <div className="mt-4 flex justify-between">
           <div>

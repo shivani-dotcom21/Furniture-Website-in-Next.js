@@ -17,28 +17,29 @@ export default function Footer() {
             </h2>
             <ul className="grid gap-2 text-[15px]">
               <li>Address: Claritas est etiam processus dynamicus</li>
-              <li>Phone: 98745612330</li>
+              <li>
+                Phone:{" "}
+                <span className="cursor-pointer hover:text-amber">
+                  98745612330
+                </span>
+              </li>
               <li>Email: furniture@gmail.com</li>
             </ul>
-            <div className="flex gap-3 pt-4">
-              <div className="border p-2 rounded-full border-gray-300">
-                <FaFacebookF className="text-xl " />
+            <div className="flex gap-3 pt-4 ">
+              <div className="border p-2 rounded-full border-gray-300 cursor-pointer hover:border-amber hover:scale-120">
+                <FaFacebookF className="text-xl  hover:text-amber" />
               </div>
-              <div className="border p-2 rounded-full border-gray-300">
-                {" "}
-                <FaInstagram className="text-lg" />{" "}
+              <div className="border p-2 rounded-full border-gray-300 cursor-pointer hover:border-amber hover:scale-120">
+                <FaInstagram className="text-lg  hover:text-amber" />
               </div>
-              <div className="border p-2 rounded-full border-gray-300">
-                {" "}
-                <FaTwitter className="text-lg" />{" "}
+              <div className="border p-2 rounded-full border-gray-300 cursor-pointer hover:border-amber hover:scale-120">
+                <FaTwitter className="text-lg  hover:text-amber" />
               </div>
-              <div className="border p-2 rounded-full border-gray-300">
-                {" "}
-                <FaYoutube className="text-lg" />{" "}
+              <div className="border p-2 rounded-full border-gray-300 cursor-pointer hover:border-amber hover:scale-120">
+                <FaYoutube className="text-lg  hover:text-amber" />
               </div>
-              <div className="border p-2 rounded-full border-gray-300">
-                {" "}
-                <BsTelegram className="text-lg" />{" "}
+              <div className="border p-2 rounded-full border-gray-300 cursor-pointer hover:border-amber hover:scale-120">
+                <BsTelegram className="text-lg  hover:text-amber" />
               </div>
             </div>
           </div>
@@ -48,9 +49,9 @@ export default function Footer() {
                 Information
               </h2>
               <ul className="grid gap-2 text-[15px]">
-                <li>About Us</li>
-                <li>Contact Us</li>
-                <li>Frequently Questions</li>
+                <li className="cursor-pointer hover:text-amber">About Us</li>
+                <li className="cursor-pointer hover:text-amber">Contact Us</li>
+                <li className="cursor-pointer hover:text-amber">Frequently Questions</li>
               </ul>
             </div>
             <div>
@@ -59,10 +60,10 @@ export default function Footer() {
                 My Account
               </h2>
               <ul className="grid gap-2 text-[15px]">
-                <li> My Dashboard</li>
-                <li>Wishlist</li>
-                <li>Cart</li>
-                <li>Checkout</li>
+                <li className="cursor-pointer hover:text-amber"> My Dashboard</li>
+                <li className="cursor-pointer hover:text-amber">Wishlist</li>
+                <li className="cursor-pointer hover:text-amber">Cart</li>
+                <li className="cursor-pointer hover:text-amber">Checkout</li>
               </ul>
             </div>
           </div>
@@ -76,12 +77,12 @@ export default function Footer() {
                   <img
                     src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/66ed867c-3f0b-4b29-82b7-4246a035a39e-1782986536.webp"
                     alt=""
-                    className="w-25 h-fit"
+                    className="w-25 h-fit cursor-pointer"
                   />
                 </figure>
                 <div className="grid gap-2">
-                  <p className="text-sm">Dinning Tables</p>
-                  <h1 className="font-poppins text-lg">
+                  <p className="text-sm cursor-pointer">Dinning Tables</p>
+                  <h1 className="font-poppins text-lg cursor-pointer hover:text-amber">
                     Carved Sheesham Wood Ladder Bookshelf
                   </h1>
                   <p className="text-[15px] font-semibold">
@@ -97,12 +98,12 @@ export default function Footer() {
                   <img
                     src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1615277326496Sapien%20Sofa%20Cum%20Bed__.jpg"
                     alt=""
-                    className="w-[80px] h-fit"
+                    className="w-[80px] h-fit cursor-pointer"
                   />
                 </figure>
                 <div className="grid gap-2">
-                  <p className="text-sm">Wooden Sofa Cum Bed</p>
-                  <h1 className="font-poppins text-lg">Sapien Sofa Cum Bed</h1>
+                  <p className="text-sm cursor-pointer">Wooden Sofa Cum Bed</p>
+                  <h1 className="font-poppins text-lg cursor-pointer hover:text-amber">Sapien Sofa Cum Bed</h1>
                   <p className="text-[15px] font-semibold">
                     {" "}
                     <span className="line-through mr-3">Rs. 64,000</span>{" "}
@@ -116,10 +117,10 @@ export default function Footer() {
 
         <div className="border-y py-4 border-gray-200 my-10">
           <ul className="flex gap-10 justify-center items-center">
-            <li> Home</li>
-            <li> Online Store</li>
-            <li> Privacy Policy</li>
-            <li> Terms Of Use</li>
+            <li className="cursor-pointer hover:text-amber"> Home</li>
+            <li className="cursor-pointer hover:text-amber"> Online Store</li>
+            <li className="cursor-pointer hover:text-amber"> Privacy Policy</li>
+            <li className="cursor-pointer hover:text-amber"> Terms Of Use</li>
           </ul>
         </div>
         <div className="text-center">

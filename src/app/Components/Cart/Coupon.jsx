@@ -5,7 +5,7 @@ export default function Coupon() {
     <>
       <section className="max-w-[1320px] mx-auto flex justify-center items-start gap-5 my-10">
         <div className="w-[550px] mx-auto border border-gray-300 font-outfit  grid gap-5">
-          <h1 className="text-2xl bg-zinc-800 p-2 text-white font-poppins">
+          <h1 className="text-xl bg-zinc-800 p-2 text-white font-poppins">
             Coupon
           </h1>
           <div className="p-5">
@@ -24,7 +24,7 @@ export default function Coupon() {
         </div>
 
         <div className="w-[550px] mx-auto border  border-gray-300 font-outfit  grid gap-5">
-          <h1 className="text-2xl bg-zinc-800 p-2 text-white font-poppins">
+          <h1 className="text-xl bg-zinc-800 p-2 text-white font-poppins">
             Cart Totals
           </h1>
           <div className=" grid gap-3 p-5 font-semibold ">
