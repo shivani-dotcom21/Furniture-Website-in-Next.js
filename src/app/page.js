@@ -21,7 +21,7 @@ export default async function Home() {
     <>
       <BannerSlider />
       <ChairCollection />
-      {data && <ProductCart productData={data} />}
+      {/* {data && <ProductCart productData={data} />} */}
 
       <ProductItems />
       <NewTrending />

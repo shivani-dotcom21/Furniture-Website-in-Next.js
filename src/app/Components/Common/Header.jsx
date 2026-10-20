@@ -8,12 +8,22 @@ import { IoIosMenu } from "react-icons/io";
 import { MdOutlineClose } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCredentials } from "@/app/redux/authSlice";
+import { redirect } from "next/navigation";
 
 export default function Header() {
+  let token = useSelector((allstore) => allstore.auth.token);
+  console.log(token);
+
+  let dispatch = useDispatch();
+  let logOut = () => {
+    dispatch(clearCredentials());
+    redirect("/login");
+  };
+
   let [halfCart, setHalfCart] = useState(false);
-
   let [menu, setMenu] = useState(false);
-
   let [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -33,15 +43,30 @@ export default function Header() {
   return (
     <>
       <div className=" hidden lg:block w-[1320px] lg:flex justify-between items-center py-3 text-[13px] px-30">
-        <p>Contact us 24/7 : +91-98745612330 / furniture@gmail.com</p>
-        <p>
-          <span className="hover:text-amber cursor-pointer">
-            <Link href="/login">Login / </Link>
-          </span>
-          <span className="hover:text-amber cursor-pointer">
-            <Link href="/register">Register</Link>
-          </span>
-        </p>
+        <div className="w-full  text-end font-semibold">
+          {token ? (
+            <>
+              <button
+                onClick={logOut}
+                className="mr-2 hover:text-amber cursor-pointer"
+              >
+                Logout
+              </button>
+              <button className="hover:text-amber cursor-pointer">
+                MyProfile
+              </button>
+            </>
+          ) : (
+            <>
+              <span className="hover:text-amber cursor-pointer">
+                <Link href="/login">Login / </Link>
+              </span>
+              <span className="hover:text-amber cursor-pointer">
+                <Link href="/register">Register</Link>
+              </span>
+            </>
+          )}
+        </div>
       </div>
 
       <hr className="text-gray-300" />
@@ -61,8 +86,8 @@ export default function Header() {
             <IoSearchOutline className="text-lg hover:text-amber cursor-pointer" />
           </form>
           <div className="border px-3 flex items-center border-gray-200 py-2 lg:py-0 hover:text-amber">
-           <Link href='/wishlist'>
-            <FaHeart className="text-xl cursor-pointer hover:scale-120 duration-500 ease-inout" />
+            <Link href="/wishlist">
+              <FaHeart className="text-xl cursor-pointer hover:scale-120 duration-500 ease-inout" />
             </Link>
           </div>
 
@@ -81,7 +106,8 @@ export default function Header() {
         </div>
         {/* {` fixed right-0 top-0 ${halfCart ? "right-0" : "righ-"} duration-900 ease-in-out  z-999 border w-[350] h-screen bg-white  p-5 font-outfit text-zinc-700`} */}
         <div
-          className={`hidden lg:block p-5 fixed top-0 right-0 h-screen w-[27%] bg-white z-50 border transition-transform   duration-500 ease-in-out ${halfCart ? "translate-x-0" : "translate-x-full"
+          className={`hidden lg:block p-5 fixed top-0 right-0 h-screen w-[27%] bg-white z-50 border transition-transform   duration-500 ease-in-out ${
+            halfCart ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <div>
@@ -110,14 +136,18 @@ export default function Header() {
 
             <p className="flex justify-between items-center text-sm">
               {" "}
-              Subtotle: <span >Rs. 0000</span>
+              Subtotle: <span>Rs. 0000</span>
             </p>
             <div className="grid justify-center items-center gap-5 p-5 bg-black my-5">
               <button className="px-24 py-3  bg-zinc-800 text-white font-semibold text-sm rounded-lg hover:bg-amber">
-                <Link href="/cart" onClick={()=> setHalfCart(false)}>VIEW CART</Link>
+                <Link href="/cart" onClick={() => setHalfCart(false)}>
+                  VIEW CART
+                </Link>
               </button>
               <button className="px-24 py-3 bg-amber text-white font-semibold text-sm rounded-lg">
-                <Link href='/register' onClick={()=> setHalfCart(false)} >CHECKOUT</Link>
+                <Link href="/checkout" onClick={() => setHalfCart(false)}>
+                  CHECKOUT
+                </Link>
               </button>
             </div>
           </div>
@@ -193,7 +223,7 @@ export default function Header() {
             <Link href="/">Home</Link>
           </li>
           <li className="flex items-end hover:text-amber">
-           <Link href=''> Living</Link> <MdExpandMore className="text-lg" />
+            <Link href=""> Living</Link> <MdExpandMore className="text-lg" />
           </li>
           <li className="flex items-end hover:text-amber">
             Sofa <MdExpandMore className="text-lg" />

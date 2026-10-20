@@ -5,7 +5,7 @@ import Register from '../Components/Register/Register'
 export default function page() {
   return (
     <>
-      <BreadCrums title='My Dashboard'/>
+      <BreadCrums title='Create Account'/>
       <Register/>
     </>
   )

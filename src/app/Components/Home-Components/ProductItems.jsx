@@ -92,15 +92,10 @@ export default function ProductItems() {
                 Caroline Study Tables
               </p>
               <p className="font-outfit ">
-                {" "}
-                <span className="line-through text-sm mr-2">
-                  {" "}
-                  Rs.3,000
-                </span>{" "}
+                <span className="line-through text-sm mr-2">Rs.3,000</span>
                 <span className="text-[17px] font-bold text-amber">
-                  {" "}
                   Rs. 2,500
-                </span>{" "}
+                </span>
               </p>
               <div className="flex gap-3">
                 <FaRegHeart className="text-xl font-bold text-black w-[30px] h-[30px] p-1 hover:bg-amber" />

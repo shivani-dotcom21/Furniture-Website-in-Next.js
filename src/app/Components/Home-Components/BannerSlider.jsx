@@ -10,7 +10,8 @@ import { Pagination, Autoplay } from "swiper/modules";
 export default function BannerSlider() {
   return (
     <>
-      <Swiper className="w-full h-fit"
+      <Swiper
+        className="w-full h-fit"
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
         pagination={{ clickable: true }}
@@ -29,14 +30,6 @@ export default function BannerSlider() {
           <figure>
             <img
               src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/slider/541928cd-e696-4c09-9f1c-bc9d7127c451-1671388153.jpg"
-              className="w-full h-full lg:h-[500px]"
-            />
-          </figure>
-        </SwiperSlide>
-        <SwiperSlide>
-          <figure>
-            <img
-              src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/slider/add8f1ce-ae5a-4d6b-b573-8c208b6745d5-1671388062.jpg"
               className="w-full h-full lg:h-[500px]"
             />
           </figure>
