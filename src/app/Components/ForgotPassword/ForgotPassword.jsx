@@ -3,13 +3,14 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 import axios from "axios";
 import { useState } from "react";
-import iziToast from "izitoast";
+// import iziToast from "izitoast";
 
 export default function ForgotPassword() {
   let apiBaseApi = process.env.NEXT_PUBLIC_APIBASEURL;
   let [isSubmitting, setIsSubmitting] = useState(false);
 
-  let handleForgotPassword = (e) => {
+  let handleForgotPassword = async (e) => {
+    let iziToast = (await import("izitoast")).default;
     setIsSubmitting(true);
     e.preventDefault();
     let obj = {
