@@ -151,30 +151,7 @@ export default function Header() {
               </button>
             </div>
           </div>
-          {/* <div>
-            <h2 className="flex justify-between items-center text-xl font-semibold border-b pb-3 border-gray-300">
-              Cart
-              <IoMdClose
-                onClick={() => setHalfCart(halfCart == "true" ? null : "true")}
-                className="text-2xl hover:text-amber hover:cursor-pointer"
-              />
-            </h2>
-            <figure>
-              <img
-                src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-illustration-svg-download-png-11349358.png"
-                alt=""
-                className="w-fit h-fit"
-              />
-            </figure>
-            <div className="text-center grid gap-8">
-              <h1 className="text-2xl font-bold font-upright">
-                Your Shopping Cart is Empty
-              </h1>
-              <button className="w-fit mx-auto text-lg font-semibold font-outfit border rounded-lg py-2 px-5 bg-zinc-900 text-white hover:bg-amber shadow-lg shadow-blue-500/50 hover:shadow-blue-500/80 transition-shadow">
-                Shop Now
-              </button>
-            </div>
-          </div> */}
+          
         </div>
         <button
           onClick={() => setMenu(!menu)}
