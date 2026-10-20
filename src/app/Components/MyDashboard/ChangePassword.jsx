@@ -1,7 +1,6 @@
 "use client";
 import { clearCredentials } from "@/app/redux/authSlice";
 import axios from "axios";
-import iziToast from "izitoast";
 import { redirect } from "next/navigation";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,7 +13,7 @@ export default function ChangePassword() {
   let dispatch = useDispatch();
   let handleChangePassword = async (e) => {
     e.preventDefault();
-    // let iziToast = (await import("izitoast")).default;
+    let iziToast = (await import("izitoast")).default;
     setIsSubmitting(true);
     let obj = {
       oldPassword: e.target.oldPassword.value,
