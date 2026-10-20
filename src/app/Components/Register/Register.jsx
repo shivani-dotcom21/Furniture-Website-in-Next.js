@@ -3,13 +3,14 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import axios from "axios";
-import iziToast from "izitoast";
+// import iziToast from "izitoast";
 
 export default function Register() {
   let apiBaseApi = process.env.NEXT_PUBLIC_APIBASEURL;
   // console.log(apiBaseApi);
 
-  let handleRegister = (e) => {
+  let handleRegister = async (e) => {
+    let iziToast = (await import("izitoast")).default;
     e.preventDefault();
     let obj = {
       name: e.target.name.value,
